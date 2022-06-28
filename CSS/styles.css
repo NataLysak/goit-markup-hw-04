@@ -8,6 +8,7 @@
 --text-header-color:#212121; 
 --logo-header-color: black; 
 --portfolio-btn-color: #F5F4FA;
+--client-color: #AFB1B8;
 }
 
 .link{
@@ -105,6 +106,7 @@ img{
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    
     color:var(--active-color);
     padding-top: 32px;
     padding-bottom: 32px;
@@ -114,15 +116,38 @@ img{
 .header-contact:focus, 
 .header-contact:active {color: var(--accent-color);
     }
+.contact{
+    fill: var(--active-color);
+    margin-right: 10px;
 
+}
+.contact:hover,
+.contact:focus,
+.contact:active {
+    fill: var(--accent-color);
+}
 /* Hero */
+
 
 .hero{
     text-align: center;
     background-color: var(--background-footer-color);
     padding: 200px 0px;
+    
 }
-
+    
+   .overlay {
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+     
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+    url(../images/Hero/Img\ \(1\).jpg);
+}      
+        
 .hero-title{
     margin-bottom: 30px; 
     width: 696px;
@@ -160,14 +185,36 @@ img{
 /* Hidden title */
 .advantages{
     display: flex; 
+
 }
 
 .advantages .part{
     width: 270px;
+   
 }
 .advantages .part:not(:last-child){
     margin-right: 30px;
 }
+
+.feature{
+    display: flex;
+    width: 270px;
+    height: 120px;
+  
+    justify-content:center;
+    align-items: center;
+
+
+    background-color:var(--portfolio-btn-color);
+    border-radius: 4px;
+
+    border: var(--portfolio-btn-color);
+    margin-bottom: 30px;
+
+
+    
+}
+
 .visually-hidden {
     clip: rect(0 0 0 0);
     height: 1px;
@@ -249,12 +296,40 @@ img{
     font-size: 16px;
     line-height: 1.19x;
     text-align: center;
+    margin-bottom: 16px;
     }
+
+    /* Оформление иконок */
+.social{
+    display: flex;
+    justify-content: center;
+
+}
+.social-media:not(:last-child){margin-right: 10px;}
+
+.social-media-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #AFB1B8;
+    width: 44px;
+    height: 44px;
+   
+    border-radius: 50%;
+}
+/* Устанавливаем fill на иконку при hover */ 
+.social-media-link:focus,
+.social-media-link:hover{ 
+    fill: var(--background-color);
+    background-color: var(--accent-color);}
+
+.social-media-icon{color: currentColor;}
+
 
   /* Portfolio */
 .portfolio{
-        padding-top: 94px;
-        padding-bottom: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /* Кнопки фильтра */
@@ -325,6 +400,47 @@ img{
     line-height: 2;
     color: var(--active-color);}
 
+/* Постоянные клиенты */
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.icon-client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--client-color);
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    border-color: var(--client-color);
+
+    width: 170px;
+    height: 92px;
+
+}
+
+.icon-logo{
+    fill: currentColor;
+
+}
+
+.icon-client:focus,
+.icon-client:hover{
+    border-color:var(--accent-color) ;
+}
+.icon-logo:focus,
+.icon-logo:hover{
+    fill: var(--accent-color);
+}
+
+.client:not(:last-child) {
+    margin-right: 30px;
+}
 
 
 /* Footer studio*/
@@ -369,3 +485,4 @@ img{
 .contact:hover {
     color: var(--accent-color)
 }
+.inviting-footer
