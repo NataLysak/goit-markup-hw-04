@@ -109,25 +109,22 @@ img{
     line-height: 1.14;
     letter-spacing: 0.02em;
     
-    color:var(--active-color);
+    color:currentColor;
     padding-top: 32px;
     padding-bottom: 32px;
     }
+.contact-svg{
+    fill: currentColor;
+    margin-right: 10px;
+
+}
 
 .header-contact:hover, 
 .header-contact:focus, 
 .header-contact:active {color: var(--accent-color);
     }
-.contact{
-    fill: var(--active-color);
-    margin-right: 10px;
 
-}
-.contact:hover,
-.contact:focus,
-.contact:active {
-    fill: var(--accent-color);
-}
+
 /* Hero */
 
 
@@ -140,12 +137,13 @@ img{
     
    .overlay {
     max-width: 1600px;
-    min-height: 600px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
      
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
     url(../images/Hero/Img\ \(1\).jpg);
 }      
@@ -303,30 +301,32 @@ img{
     }
 
     /* Оформление иконок */
+    
 .social{
     display: flex;
     justify-content: center;
 
 }
 .social-media:not(:last-child){margin-right: 10px;}
-
 .social-media-link{
     display: flex;
     align-items: center;
     justify-content: center;
-    fill: #AFB1B8;
+    color:var(--client-color);
     width: 44px;
     height: 44px;
-   
     border-radius: 50%;
 }
+
+.social-media-icon{fill: currentColor;}
+
+
 /* Устанавливаем fill на иконку при hover */ 
 .social-media-link:focus,
 .social-media-link:hover{ 
-    fill: var(--background-color);
+    color: var(--background-color);
     background-color: var(--accent-color);}
 
-.social-media-icon{color: currentColor;}
 
 
   /* Portfolio */
@@ -438,10 +438,7 @@ img{
 .icon-client:focus,
 .icon-client:hover{
     border-color:var(--accent-color) ;
-}
-.icon-logo:focus,
-.icon-logo:hover{
-    fill: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .client:not(:last-child) {
@@ -489,15 +486,11 @@ img{
     color: rgba(255, 255, 255, 0.6);
 }
 
-.contact:hover {
+.contact:hover,
+.contact:focus{
     color: var(--accent-color)
 }
 
-
-.inviting-div{
- 
-
-}
 
 .inviting-title{
     font-weight: 700;
@@ -514,9 +507,6 @@ img{
 .inviting-ul{ 
     display: flex;
     margin-top: 20px;
-       
- 
-
 }
 .inviting-li:not(:last-child){margin-right: 10px;}
 
@@ -524,26 +514,26 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    fill: #AFB1B8;
+    fill: var(--background-color);
     width: 44px;
     height: 44px;
  
-   
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);;
+    background-color: rgba(255, 255, 255, 0.1);
 }
+
 .inviting-media:focus,
 .inviting-media:hover{ 
-    fill: var(--background-color); 
     background-color: var(--accent-color);}
 
-.footer-div{
+
+.footer .container{    
     display: flex;
-    align-items: center;
-}
+    align-items: baseline;}
+
+
 .footer-block{
     margin-right: 70px;
 }
 
 .footer-block:last-child{margin-right: 0px;}
-    
